@@ -5,14 +5,12 @@ import {
   SET_VISIBILITY_FILTER,
   VisibilityFilters
 } from './actions'
-
 const { SHOW_ALL } = VisibilityFilters
 
 function visibilityFilter(state = SHOW_ALL, action) {
   switch (action.type) {
     case SET_VISIBILITY_FILTER:
-      return action.filter
-  
+      return action.visibilityFilter
     default:
       return state
   }
@@ -31,7 +29,12 @@ function todos(state = [], action) {
       ]
     case TOGGLE_TODO:
       return state.map((todo) => {
-        todo.id === action.id ? { ...todo, completed: !todo.completed } : todo  
+        if (todo.id === action.id) {
+          return Object.assign({}, todo, {
+            completed: !todo.completed
+          })
+        }
+        return todo
       })
     default:
       return state

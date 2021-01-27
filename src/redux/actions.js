@@ -22,6 +22,6 @@ export function toggleTodo(id) {
   return {type: TOGGLE_TODO, id}
 }
 
-export function setVisibilityFilter(filter) {
-  return {type: SET_VISIBILITY_FILTER, filter}
+export function setVisibilityFilter(visibilityFilter) {
+  return {type: SET_VISIBILITY_FILTER, visibilityFilter}
 }

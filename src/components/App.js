@@ -1,9 +1,14 @@
 import React from 'react'
+import AddTodo from '../containers/AddTodo'
+import VisibleTodoList from '../containers/VisibleTodoList'
+import Filter from './Filter'
 
 function App() {
   return (
     <div>
-      Hello
+      <AddTodo />
+      <Filter />
+      <VisibleTodoList />
     </div>
   )
 }
