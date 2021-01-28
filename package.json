@@ -1,7 +1,7 @@
 {
   "name": "Redux",
   "version": "1.0.0",
-  "description": "Learn Redux",
+  "description": "Learn Redux Advanced",
   "private": "true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
